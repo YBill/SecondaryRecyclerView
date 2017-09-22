@@ -17,12 +17,12 @@ import java.util.List;
  * Created by Bill on 2017/9/20.
  */
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHolder> {
 
     private Context context;
     private List<DataBean> list = new ArrayList<>();
 
-    public MyAdapter(Context context, List<DataBean> list) {
+    public HistoryAdapter(Context context, List<DataBean> list) {
         this.context = context;
         this.list = list;
     }
@@ -73,12 +73,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             itemLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (data.isExpans) {
-                        data.isExpans = false;
+                    if (data.isUnfold) {
+                        data.isUnfold = false;
                         child.setVisibility(View.GONE);
                         rotationExpandIcon(180, 0);
                     } else {
-                        data.isExpans = true;
+                        data.isUnfold = true;
                         child.setVisibility(View.VISIBLE);
                         rotationExpandIcon(0, 180);
                     }

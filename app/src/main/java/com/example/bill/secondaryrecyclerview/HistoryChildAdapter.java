@@ -45,15 +45,23 @@ public class HistoryChildAdapter extends RecyclerView.Adapter<HistoryChildAdapte
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
+        private View itemLayout;
         private TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            this.itemLayout = itemView.findViewById(R.id.rl_child);
             this.textView = (TextView) itemView.findViewById(R.id.tv_child_content);
         }
 
         private void update(int position) {
             textView.setText(list.get(position));
+            itemLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
 
     }

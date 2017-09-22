@@ -11,7 +11,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private MyAdapter myAdapter;
+    private HistoryAdapter myAdapter;
     private List<DataBean> list = new ArrayList<>();
 
     @Override
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initData();
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view);
-        myAdapter = new MyAdapter(this, list);
+        myAdapter = new HistoryAdapter(this, list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myAdapter);
 

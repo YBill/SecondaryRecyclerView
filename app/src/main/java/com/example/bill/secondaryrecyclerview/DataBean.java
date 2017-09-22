@@ -10,5 +10,5 @@ public class DataBean {
     public String title;
     public List<String> list;
 
-    public boolean isExpans = false;
+    public boolean isUnfold = false;
 }
